@@ -1,0 +1,18 @@
+select brand, model, price from cars;
+select count(*) as total from cars;
+select * from cars where brand = 'Hyundai';
+select brand, model, color from cars where color ilike 'red' or color ilike 'blue';
+select * from cars where year_of_issue between '2000' and '2010';
+select count (*) as chevrolet from cars where brand ilike 'chevrolet';
+select avg(year_of_issue) as avg_years_of_issue from cars;
+select * from cars where brand in('Audi','Toyota','Kia','Ford');
+select * from cars where model like 'T%';
+select * from cars where model like '%e';
+select brand from cars where length(brand) =5;
+select sum(price) from cars where brand ilike 'mercedes-benz';
+select max(price) as max, min(price) as min from cars;
+select * from cars where brand != 'Toyota';
+select * from cars order by price desc limit 10;
+select * from cars order by year_of_issue desc  limit 10;
+select * from cars where year_of_issue not between 1995 and 2005;
+select color, count(*) as count from cars group by color order by count desc limit 1;
